@@ -1,25 +1,55 @@
-import {Command, flags} from '@oclif/command'
+import { Command, flags } from '@oclif/command'
+import { allUnits, normalize } from '../units'
+import length from '@turf/length'
+import { convertLength } from '@turf/helpers'
+import readJson from '../util/read-json'
 
 export default class Perimeter extends Command {
-  static description = 'describe the command here'
+  static description = 'calculates the total perimeter for some GeoJSON'
 
   static flags = {
-    help: flags.help({char: 'h'}),
-    // flag with a value (-n, --name=VALUE)
-    name: flags.string({char: 'n', description: 'name to print'}),
-    // flag with no value (-f, --force)
-    force: flags.boolean({char: 'f'}),
+    help: flags.help({ char: 'h' }),
+    noUnits: flags.boolean({
+      char: 'n',
+      description: "don't display the units on output",
+    }),
   }
 
-  static args = [{name: 'file'}]
+  static args = [
+    { name: 'file', description: 'a file path or URL to some GeoJSON' },
+    {
+      name: 'units',
+      description: 'the desired output units of the computation',
+      options: allUnits,
+      default: 'm',
+    },
+  ]
 
   async run() {
-    const {args, flags} = this.parse(Perimeter)
+    const {
+      args: { file, units },
+      flags: { noUnits },
+    } = this.parse(Perimeter)
 
-    const name = flags.name ?? 'world'
-    this.log(`hello ${name} from /Users/akaminsky/git/geojson-stats/src/commands/perimeter.ts`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
+    const safeUnits = normalize(units)
+
+    if (file) {
+      if (safeUnits) {
+        const geojson = await readJson(file)
+        const computedLength = length(geojson)
+        const convertedLength = convertLength(
+          computedLength,
+          'kilometers',
+          safeUnits,
+        )
+        noUnits
+          ? this.log(convertedLength.toString())
+          : this.log(`${convertedLength} ${units}`)
+      } else {
+        this.error(`"${units}" is not a valid unit`)
+      }
+    } else {
+      this.error('no file path or url provided')
     }
   }
 }

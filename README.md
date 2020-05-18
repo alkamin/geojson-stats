@@ -1,7 +1,4 @@
-geojson-stats
-=============
-
-
+# geojson-stats
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/geojson-stats.svg)](https://npmjs.org/package/geojson-stats)
@@ -9,11 +6,15 @@ geojson-stats
 [![License](https://img.shields.io/npm/l/geojson-stats.svg)](https://github.com/alkamin/geojson-stats/blob/master/package.json)
 
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
+
 ```sh-session
 $ npm install -g geojson-stats
 $ geojson-stats COMMAND
@@ -25,13 +26,20 @@ USAGE
   $ geojson-stats COMMAND
 ...
 ```
+
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
-* [`geojson-stats area [FILE]`](#geojson-stats-area-file)
-* [`geojson-stats hello [FILE]`](#geojson-stats-hello-file)
-* [`geojson-stats help [COMMAND]`](#geojson-stats-help-command)
-* [`geojson-stats perimeter [FILE]`](#geojson-stats-perimeter-file)
+
+- [geojson-stats](#geojson-stats)
+- [Usage](#usage)
+- [Commands](#commands)
+  - [`geojson-stats area [FILE]`](#geojson-stats-area-file)
+  - [`geojson-stats hello [FILE]`](#geojson-stats-hello-file)
+  - [`geojson-stats help [COMMAND]`](#geojson-stats-help-command)
+  - [`geojson-stats perimeter [FILE]`](#geojson-stats-perimeter-file)
 
 ## `geojson-stats area [FILE]`
 
@@ -101,4 +109,5 @@ OPTIONS
 ```
 
 _See code: [src/commands/perimeter.ts](https://github.com/alkamin/geojson-stats/blob/v0.0.0/src/commands/perimeter.ts)_
+
 <!-- commandsstop -->

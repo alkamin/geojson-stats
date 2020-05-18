@@ -1,6 +1,6 @@
 {
   "name": "geojson-stats",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Alex Kaminsky @alkamin",
   "bin": {
     "geojson-stats": "./bin/run"
@@ -10,11 +10,18 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
+    "@oclif/plugin-not-found": "^1.2.4",
+    "@turf/area": "^6.0.1",
+    "@turf/helpers": "^6.1.4",
+    "@turf/length": "^6.0.2",
+    "axios": "^0.19.2",
+    "cli-ux": "^5.4.6",
     "is-url": "^1.2.4",
     "tslib": "^1"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1",
+    "@types/is-url": "^1.2.28",
     "@types/node": "^10",
     "eslint": "^5.13",
     "eslint-config-oclif": "^3.1",
@@ -43,7 +50,8 @@
     "commands": "./lib/commands",
     "bin": "geojson-stats",
     "plugins": [
-      "@oclif/plugin-help"
+      "@oclif/plugin-help",
+      "@oclif/plugin-not-found"
     ]
   },
   "repository": "alkamin/geojson-stats",
