@@ -6,20 +6,14 @@
 [![License](https://img.shields.io/npm/l/geojson-stats.svg)](https://github.com/alkamin/geojson-stats/blob/master/package.json)
 
 <!-- toc -->
-
-- [geojson-stats](#geojson-stats)
-- [Usage](#usage)
-- [Commands](#commands)
-  - [`geojson-stats area [FILE] [UNITS]`](#geojson-stats-area-file-units)
-  - [`geojson-stats autocomplete [SHELL]`](#geojson-stats-autocomplete-shell)
-  - [`geojson-stats help [COMMAND]`](#geojson-stats-help-command)
-  - [`geojson-stats perimeter [FILE] [UNITS]`](#geojson-stats-perimeter-file-units)
-  <!-- tocstop -->
+* [geojson-stats](#geojson-stats)
+* [Usage](#usage)
+* [Commands](#commands)
+<!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g geojson-stat
 $ geojson-stats COMMAND
@@ -31,20 +25,14 @@ USAGE
   $ geojson-stats COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-
-- [geojson-stats](#geojson-stats)
-- [Usage](#usage)
-- [Commands](#commands)
-  - [`geojson-stats area [FILE] [UNITS]`](#geojson-stats-area-file-units)
-  - [`geojson-stats autocomplete [SHELL]`](#geojson-stats-autocomplete-shell)
-  - [`geojson-stats help [COMMAND]`](#geojson-stats-help-command)
-  - [`geojson-stats perimeter [FILE] [UNITS]`](#geojson-stats-perimeter-file-units)
+* [`geojson-stats area [FILE] [UNITS]`](#geojson-stats-area-file-units)
+* [`geojson-stats help [COMMAND]`](#geojson-stats-help-command)
+* [`geojson-stats perimeter [FILE] [UNITS]`](#geojson-stats-perimeter-file-units)
 
 ## `geojson-stats area [FILE] [UNITS]`
 
@@ -66,29 +54,6 @@ OPTIONS
 ```
 
 _See code: [src/commands/area.ts](https://github.com/alkamin/geojson-stats/blob/v1.0.1/src/commands/area.ts)_
-
-## `geojson-stats autocomplete [SHELL]`
-
-display autocomplete installation instructions
-
-```
-USAGE
-  $ geojson-stats autocomplete [SHELL]
-
-ARGUMENTS
-  SHELL  shell type
-
-OPTIONS
-  -r, --refresh-cache  Refresh cache (ignores displaying instructions)
-
-EXAMPLES
-  $ geojson-stats autocomplete
-  $ geojson-stats autocomplete bash
-  $ geojson-stats autocomplete zsh
-  $ geojson-stats autocomplete --refresh-cache
-```
-
-_See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v0.2.0/src/commands/autocomplete/index.ts)_
 
 ## `geojson-stats help [COMMAND]`
 
@@ -127,5 +92,4 @@ OPTIONS
 ```
 
 _See code: [src/commands/perimeter.ts](https://github.com/alkamin/geojson-stats/blob/v1.0.1/src/commands/perimeter.ts)_
-
 <!-- commandsstop -->
