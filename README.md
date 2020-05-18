@@ -6,76 +6,78 @@
 [![License](https://img.shields.io/npm/l/geojson-stats.svg)](https://github.com/alkamin/geojson-stats/blob/master/package.json)
 
 <!-- toc -->
-
-- [Usage](#usage)
-- [Commands](#commands)
+* [geojson-stats](#geojson-stats)
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
-$ npm install -g geojson-stats
+$ npm install -g geojson-stat
 $ geojson-stats COMMAND
 running command...
 $ geojson-stats (-v|--version|version)
-geojson-stats/0.0.0 darwin-x64 node-v13.6.0
+geojson-stat/1.0.0 darwin-x64 node-v13.6.0
 $ geojson-stats --help [COMMAND]
 USAGE
   $ geojson-stats COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
+* [`geojson-stats area [FILE] [UNITS]`](#geojson-stats-area-file-units)
+* [`geojson-stats autocomplete [SHELL]`](#geojson-stats-autocomplete-shell)
+* [`geojson-stats help [COMMAND]`](#geojson-stats-help-command)
+* [`geojson-stats perimeter [FILE] [UNITS]`](#geojson-stats-perimeter-file-units)
 
-- [geojson-stats](#geojson-stats)
-- [Usage](#usage)
-- [Commands](#commands)
-  - [`geojson-stats area [FILE]`](#geojson-stats-area-file)
-  - [`geojson-stats hello [FILE]`](#geojson-stats-hello-file)
-  - [`geojson-stats help [COMMAND]`](#geojson-stats-help-command)
-  - [`geojson-stats perimeter [FILE]`](#geojson-stats-perimeter-file)
+## `geojson-stats area [FILE] [UNITS]`
 
-## `geojson-stats area [FILE]`
-
-describe the command here
+calculates the total perimeter for some GeoJSON
 
 ```
 USAGE
-  $ geojson-stats area [FILE]
+  $ geojson-stats area [FILE] [UNITS]
+
+ARGUMENTS
+  FILE   a file path or URL to some GeoJSON
+
+  UNITS  (km|kilometers|kilometres|m|meters|metres|cm|centimeters|centimetres|mm|millimeters|millimetres|ft|feet|in|inch
+         es|acres|miles|yards) [default: m] the desired output units of the computation
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help     show CLI help
+  -n, --noUnits  don't display the units on output
 ```
 
-_See code: [src/commands/area.ts](https://github.com/alkamin/geojson-stats/blob/v0.0.0/src/commands/area.ts)_
+_See code: [src/commands/area.ts](https://github.com/alkamin/geojson-stats/blob/v1.0.0/src/commands/area.ts)_
 
-## `geojson-stats hello [FILE]`
+## `geojson-stats autocomplete [SHELL]`
 
-describe the command here
+display autocomplete installation instructions
 
 ```
 USAGE
-  $ geojson-stats hello [FILE]
+  $ geojson-stats autocomplete [SHELL]
+
+ARGUMENTS
+  SHELL  shell type
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -r, --refresh-cache  Refresh cache (ignores displaying instructions)
 
-EXAMPLE
-  $ geojson-stats hello
-  hello world from ./src/hello.ts!
+EXAMPLES
+  $ geojson-stats autocomplete
+  $ geojson-stats autocomplete bash
+  $ geojson-stats autocomplete zsh
+  $ geojson-stats autocomplete --refresh-cache
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/alkamin/geojson-stats/blob/v0.0.0/src/commands/hello.ts)_
+_See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v0.2.0/src/commands/autocomplete/index.ts)_
 
 ## `geojson-stats help [COMMAND]`
 
@@ -94,20 +96,24 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.0.1/src/commands/help.ts)_
 
-## `geojson-stats perimeter [FILE]`
+## `geojson-stats perimeter [FILE] [UNITS]`
 
-describe the command here
+calculates the total perimeter for some GeoJSON
 
 ```
 USAGE
-  $ geojson-stats perimeter [FILE]
+  $ geojson-stats perimeter [FILE] [UNITS]
+
+ARGUMENTS
+  FILE   a file path or URL to some GeoJSON
+
+  UNITS  (km|kilometers|kilometres|m|meters|metres|cm|centimeters|centimetres|mm|millimeters|millimetres|ft|feet|in|inch
+         es|acres|miles|yards) [default: m] the desired output units of the computation
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help     show CLI help
+  -n, --noUnits  don't display the units on output
 ```
 
-_See code: [src/commands/perimeter.ts](https://github.com/alkamin/geojson-stats/blob/v0.0.0/src/commands/perimeter.ts)_
-
+_See code: [src/commands/perimeter.ts](https://github.com/alkamin/geojson-stats/blob/v1.0.0/src/commands/perimeter.ts)_
 <!-- commandsstop -->

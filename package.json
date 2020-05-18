@@ -1,6 +1,6 @@
 {
   "name": "geojson-stat",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Alex Kaminsky @alkamin",
   "bin": {
     "geojson-stats": "./bin/run"
