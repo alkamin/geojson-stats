@@ -6,34 +6,45 @@
 [![License](https://img.shields.io/npm/l/geojson-stats.svg)](https://github.com/alkamin/geojson-stats/blob/master/package.json)
 
 <!-- toc -->
-* [geojson-stats](#geojson-stats)
-* [Usage](#usage)
-* [Commands](#commands)
-<!-- tocstop -->
+
+- [geojson-stats](#geojson-stats)
+- [Usage](#usage)
+- [Commands](#commands)
+  - [`geojson-stats area [FILE] [UNITS]`](#geojson-stats-area-file-units)
+  - [`geojson-stats autocomplete [SHELL]`](#geojson-stats-autocomplete-shell)
+  - [`geojson-stats help [COMMAND]`](#geojson-stats-help-command)
+  - [`geojson-stats perimeter [FILE] [UNITS]`](#geojson-stats-perimeter-file-units)
+  <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
+
 ```sh-session
 $ npm install -g geojson-stat
 $ geojson-stats COMMAND
 running command...
 $ geojson-stats (-v|--version|version)
-geojson-stat/1.0.0 darwin-x64 node-v13.6.0
+geojson-stat/1.0.1 darwin-x64 node-v13.6.0
 $ geojson-stats --help [COMMAND]
 USAGE
   $ geojson-stats COMMAND
 ...
 ```
+
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-* [`geojson-stats area [FILE] [UNITS]`](#geojson-stats-area-file-units)
-* [`geojson-stats autocomplete [SHELL]`](#geojson-stats-autocomplete-shell)
-* [`geojson-stats help [COMMAND]`](#geojson-stats-help-command)
-* [`geojson-stats perimeter [FILE] [UNITS]`](#geojson-stats-perimeter-file-units)
+
+- [geojson-stats](#geojson-stats)
+- [Usage](#usage)
+- [Commands](#commands)
+  - [`geojson-stats area [FILE] [UNITS]`](#geojson-stats-area-file-units)
+  - [`geojson-stats autocomplete [SHELL]`](#geojson-stats-autocomplete-shell)
+  - [`geojson-stats help [COMMAND]`](#geojson-stats-help-command)
+  - [`geojson-stats perimeter [FILE] [UNITS]`](#geojson-stats-perimeter-file-units)
 
 ## `geojson-stats area [FILE] [UNITS]`
 
@@ -54,7 +65,7 @@ OPTIONS
   -n, --noUnits  don't display the units on output
 ```
 
-_See code: [src/commands/area.ts](https://github.com/alkamin/geojson-stats/blob/v1.0.0/src/commands/area.ts)_
+_See code: [src/commands/area.ts](https://github.com/alkamin/geojson-stats/blob/v1.0.1/src/commands/area.ts)_
 
 ## `geojson-stats autocomplete [SHELL]`
 
@@ -115,5 +126,6 @@ OPTIONS
   -n, --noUnits  don't display the units on output
 ```
 
-_See code: [src/commands/perimeter.ts](https://github.com/alkamin/geojson-stats/blob/v1.0.0/src/commands/perimeter.ts)_
+_See code: [src/commands/perimeter.ts](https://github.com/alkamin/geojson-stats/blob/v1.0.1/src/commands/perimeter.ts)_
+
 <!-- commandsstop -->
