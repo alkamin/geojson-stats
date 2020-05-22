@@ -50,8 +50,7 @@
     "commands": "./lib/commands",
     "bin": "geojson-stats",
     "plugins": [
-      "@oclif/plugin-help",
-      "@oclif/plugin-not-found "
+      "@oclif/plugin-help"
     ]
   },
   "repository": "alkamin/geojson-stats",

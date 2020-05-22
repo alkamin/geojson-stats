@@ -19,7 +19,7 @@ $ npm install -g geojson-stat
 $ geojson-stats COMMAND
 running command...
 $ geojson-stats (-v|--version|version)
-geojson-stat/1.0.1 darwin-x64 node-v13.6.0
+geojson-stat/1.0.2 darwin-x64 node-v13.6.0
 $ geojson-stats --help [COMMAND]
 USAGE
   $ geojson-stats COMMAND
@@ -53,7 +53,7 @@ OPTIONS
   -n, --noUnits  don't display the units on output
 ```
 
-_See code: [src/commands/area.ts](https://github.com/alkamin/geojson-stats/blob/v1.0.1/src/commands/area.ts)_
+_See code: [src/commands/area.ts](https://github.com/alkamin/geojson-stats/blob/v1.0.2/src/commands/area.ts)_
 
 ## `geojson-stats help [COMMAND]`
 
@@ -91,5 +91,5 @@ OPTIONS
   -n, --noUnits  don't display the units on output
 ```
 
-_See code: [src/commands/perimeter.ts](https://github.com/alkamin/geojson-stats/blob/v1.0.1/src/commands/perimeter.ts)_
+_See code: [src/commands/perimeter.ts](https://github.com/alkamin/geojson-stats/blob/v1.0.2/src/commands/perimeter.ts)_
 <!-- commandsstop -->
